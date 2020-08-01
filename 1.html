@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+       body,html{
+           padding: 0;
+           margin: 0;
+           width: 100%;
+           height: 100%;
+       }
+       .box{
+           
+           width: 100%;
+           height: 100%;
+       }
+       .box .box2{
+           width: 100px;
+           height: 100px;
+           background-color: red;
+           position: absolute;
+          margin:-100px auto;
+          top: 50%;
+          /* left: 0;
+          right: 0;
+          bottom: 0; */
+          
+       }
+    </style>
+</head>
+<body>
+       <div class="box">
+           <div class="box2">w de de de </div>
+       </div>
+    <!-- <input type="text" id="input">
+    <button id="btn">搜索</button>
+        <ul id="oul"> 
+
+        </ul> -->
+    <script src="./jquery.js"></script>
+    <script>
+        // function traverse(){
+        //     var arr=[]
+        //     var elements=[]
+        //     if(document.all){
+        //         elements=document.all
+        //     }else{
+        //         elements=document.getElementsByTagName("*")
+        //     }
+        //     for(var i=0;i<elements.length;i++){
+        //         var ele=elements[i]
+        //         var width=parseFloat(ele.style.width) || ele.offsetWidth;
+        //         var height=parseFloat(ele.style.height) || ele.offsetHeight;
+        //         if(width>50&&height>50){
+        //             arr.push(elements[i].tagName)
+        //         }
+        //     }
+        //     return arr
+        // }
+        // window.onload=function() {
+        //     console.log(traverse())
+        // }
+        
+        // function obj(name){
+        //     this.name=name
+        //    return this
+        // // console.log(this)
+        // }
+        // // obj.prototype.name=
+        // var a = obj("name1"); 
+        
+        // // var b=new obj('name2')
+        
+    //     function Foo(){ 
+    //         var i=0;
+    //         return function(){          
+    //             document.write(i++);     
+                
+    //             } 
+    //         } 
+    // var f1=Foo(), 
+    // f2=Foo(); 
+       
+    //     let arr=[1,2,3,-1,-2,3,4,0]
+
+    //     function getarr(a,b){
+    //         return a-b;
+    //     }
+    //     let arr2=arr.sort(getarr)
+    //    console.log(arr2)
+        // let a=[1,1,1,1,2,3,4,3,2,]
+
+        // let obj=new Array(1,1,1,1,2,3,4,3,2);
+
+        // Array.prototype.delete=function(){
+        //     let newSet=new Set(this)
+        //     console.log(newSet)
+        // }
+       
+    //    let obj=new Array(1,1,1,1,2,3,4,3,2)
+    //    Array.prototype.delete=function(){
+    //        let num=[]
+    //         for(let i=0;i<this.length;i++){
+    //             if(num.indexOf(this[i])==-1){
+    //                 num.push(this[i])
+    //             }
+    //         }
+    //         console.log(num)
+    //    }
+
+    // var url = "http://www.taobao.com/index.php?key0=0&key1=1&key2=2"; 
+    // var obj= parseQueryString(url); 
+    // function parseQueryString(url){
+    //     var str=url.split('?')[1]
+    //     // console.log(str)
+    //     var result ={}
+    //     var temp = str.split('&'); 
+    //     for(let i=0;i<temp.length;i++){
+    //         let temp2=temp[i].split('=')
+    //         // console.log(temp2)
+    //         // result[temp2[0]=temp2[1]]
+            
+            
+    //     }
+    //     return result
+        
+    // }
+
+    //    let ipt=document.querySelector('input')
+    //     ipt.onfocus=function(){
+    //         ipt.placeholder=''
+    //     }
+    //     ipt.onblur=function(){
+    //         ipt.placeholder="请输入"
+    //     }
+
+               
+    // var div = document.createElement('div');             
+    // div.id = "example";             
+    // var p=document.createElement('p')            
+    // p.className="slogan"             
+    // p.innerHTML='淘！你喜欢'         
+    // div.appendChild(p)               
+    // document.body.appendChild(div)           
+
+    // var Obj = function(msg){            
+    //     this.msg = msg;         
+    //         this.shout = function(){        
+    //         alert(this.msg);        
+    //         }       
+                            
+    //         this.waitAndShout = function(){     
+    //             setTimeout(this.shout,5000)         
+    //         }       
+    //         return this     
+    // }           
+                    
+    // Obj("shouting").waitAndShout();         
+
+    // var Time =document.querySelector('.time')
+    
+    // function TwoDigit(date){
+    //     var string=date.getFullYear()+'年'+(date.getMonth()+1)+"月"+date.getDate()+'日'+
+    //     date.getHours()+'时'+date.getMinutes()+'分'+date.getSeconds()+"秒"
+    //    return string
+    // }
+    
+    // var show=TwoDigit(new Date())
+    //     Time.innerHTML=show
+
+        // let input=document.querySelector('input')
+        
+        
+        // input.oninput=function(){
+        //     let txt=input.value
+        //     let regexp =/^\d*$/; 
+        //     // console.log(input.value)
+        //     console.log(regexp.test(txt))
+        // }
+            // let str='abcd'
+            // let regexp=/^b/
+            // console.log(regexp.test(str))
+
+
+            // function f1() {     
+            //     var n = 100;      
+            //     nAdd = function() {
+            //         n += 1      
+            //         }      
+            //         function f2() {       
+            //             alert(n);      
+            //             }      
+            //             return f2;  
+            //             }
+
+            //             var result = f1();  
+            //             result();  
+            //             nAdd();  
+            //             // result();   
+
+            // let box=document.querySelector('.box')
+            
+            // document.onmousedown=function(ev){
+            //     var x=ev.clientX-box.offsetLeft;//拖动了的距离
+            //     var y=ev.clientY-box.offsetTop
+            //     box.onmousemove=function(ev){
+            //         box.style.left=ev.clientX-x+"px"
+            //         box.style.top=ev.clientY-y+'px'
+            //     }
+            // }
+            // document.onmouseup=function(ev){  
+            //     box.onmousemove=box.onmouseup=null;  
+            // }   
+
+            // function mySort() {     
+            //     var tags = new Array();//使用数组作为参数存储容器
+            //     // tags.sort(function(a,b){
+            //     //     return a-b;
+            //     // }) 
+                
+            //     tags=Array.prototype.slice.arg
+            //     console.log(tags)
+            //     // tags.sort(function(a,b){
+            //     //     return a-b
+            //     // })
+            //     return tags;//返回已经排序的数组 
+            //     } 
+            //     var result = mySort(50,11,16,32,24,99,57,100);//传入参数个数不确定 
+            //     // console.log(result);//显示结果 
+            
+        //   let arr=[1,2,3,4,5]
+          
+        //   function sum(arr){
+        //       var x=arr.sort(function(a,b){
+        //           return Math.random()>0.5?1:-1
+        //       })
+        //       return x
+        //   }
+        //  console.log( sum(arr))
+
+    //     function getdata(str){
+    //         var json={}
+    //         var gets=str.split(' ')
+    //         // console.log(gets)
+    //         for(let i=0;i<gets.length;i++){
+    //             if(i%2==0){
+    //                 json[gets[i]]=gets[i+1]
+    //             }
+    //             // json[gets[gets.length-1]]=str.split('"')[1]; 
+                
+    //         }
+    //         return json
+    //     }
+    //    let a=getdata('-name lily -age 25 -school "chengdu university"')
+
+        // Array.prototype.rmreapet=function(){
+        //     let set=new Set(this)
+        //     return set
+        // }
+
+        // let arr=new Array(1,1,2,3,4)
+
+            // let a=12;
+            // console.log(a.toString().split('').reverse().join(''))
+
+        //     function symmetry(num){
+        //         var arr=[]
+        //         for(let i=1;i<=num;i++){
+        //             let j=i.toString().split('').reverse().join('')
+        //             if(j==i){
+        //                 arr.push(i)
+        //             }
+        //         }
+        //         return arr
+        //     }
+
+        //   console.log(symmetry(10000))
+
+            // document.onclick=function(ev){
+            //     var e=window.envent ||ev
+            //     var tag=e.target
+            //     console.log(tag.tagName)
+            // }
+
+          
+
+            // input.oninput=function(){
+            //     $.ajax({
+            //         url:'http://localhost:3000',
+            //         type:'GET',
+            //         // data:{
+            //         //     callback:'smart'
+            //         // },
+            //         dataType:'jsonp',
+            //         jsonpCallback:'smart',
+            //         success:function(data){
+            //             console.log(data)
+            //         }
+            //     })
+            // }
+
+        //     let regexp=/^((11N)||(12N)||(1NNN))\d{7,8}$/
+
+        //     let a="11N111111111"
+        //   console.log(regexp.test(a))
+
+        // var obj = {   
+        //         a: 1,    
+        //         b: function () {console.log(this.a)}
+        //     };
+        //         var a = 2;
+        //         var objb = obj.b;
+        //         // obj.b();////1
+        //         // objb(); //1
+        //         // obj.b.call(window); //
+        //         // console.log(objb)
+
+      
+        // var a = 1;
+        // function b() {    
+        //     var a = 2;    
+        //     function c() {        
+        //         console.log(a);    
+        //     }    
+        //     return c;
+        // }
+        //     b()(); 
+
+            // var foo=1;
+            // function a (){
+            //     var foo
+            //     console.log(foo)
+            //     foo=2;
+            //     console.log(foo)
+            // }
+            // a()
+                // var arr=[]
+                // function getRandom(istart,isend){
+                //     var iChoice =isend-istart;
+                //     return Math.floor(Math.random()*iChoice+istart)
+                // }
+                
+                // for(let i=0;i<10;i++){
+                //     getRandom(10,100)
+                //     arr.push(getRandom(10,100))
+                //     arr.sort(function(a,b){
+                //         return a-b
+                //     })
+                // }
+                // console.log(arr)
+
+                    // var a=['1','a']
+                    // var b=['2','b']
+                    // var c=a.concat(b)
+                    // c.splice(1,1)
+                    // console.log(c)
+
+
+                    // var User = {   
+                    //     count: 1,     
+                    //     getCount: function() {   
+                            
+                    //         return this.count;   
+                    //         } 
+                    //     };
+                    //     // console.log(User.getCount());  
+                    //     var func = User.getCount   
+                    //     console.log(func()) 
+                    
+                    // var length = 10;  
+                    
+                    // function fn() {  
+                        
+                    //     console.log(this.length);  
+                    //     } 
+
+                    // var obj = {
+                    //     length: 5,    
+                    //     method: function(fn) {  
+                            
+                    //         fn();      
+                    //         // arguments[0]();    
+                    //         } 
+                    //     };  
+
+                    //     obj.method(fn);   
+
+                    // function fn(a) {    
+                    //     console.log(a);    
+                    //     var a = 2;    
+                    //     function a() {
+                            
+                    //     }   
+                    //     console.log(a);  
+                    //     }    
+                    //     fn(1); 
+
+
+                    // var f = true;  
+                    // if (f === true) {    
+                    //     var a = 10;  
+                    // }    
+                    // function fn() {    
+                    //     var b = 20;
+                    //     c = 30;  
+                        
+                    // }    
+                    // fn();  
+                    // console.log(a);  //10
+                    // console.log(b);  //报错
+                    // console.log(c); //30
+
+                    // var a = 10;  
+                    // a.pro = 10;  
+                    // console.log(a.pro+a);//NaN
+                    // var s = 'hello';  
+                    // s.pro = 'world';  
+                    // console.log(s.pro + s);  //undifindhello
+                        
+                    // console.log( fn);  
+                    // function fn() {};  
+                    // var fn; 
+
+                //    function v(a){
+                //     console.log(a)
+                //         var a=2;
+                //         function a(){}
+                //         console.log(a)
+                //    }
+                //    v(1)
+    </script>    
+    
+</body>
+</html>
